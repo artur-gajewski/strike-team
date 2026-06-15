@@ -15,7 +15,7 @@ The goal is to down all enemy operants, or achieve your mission objective before
 
 Players alternate taking turns. On **your turn**, you receive **3 Command Points (CP)**.
 
-Each CP may be spent on one action. You may spend all 3 CP on different actions, or repeat the same action multiple times (e.g., three Moves in a row). **Any unused CP are lost at the end of your turn.**
+Each CP may be spent on one action assigned to any operant. An operant may receive up to 3 CP in a single turn — one Move, one Scout, and one Shoot/Fight — but **the same action type cannot be spent twice on the same operant**. Any unused CP are lost at the end of your turn.
 
 | CP Cost | Action  | What it does                                      |
 |---------|---------|---------------------------------------------------|
@@ -23,7 +23,7 @@ Each CP may be spent on one action. You may spend all 3 CP on different actions,
 | 1       | **Scout** | One operant attempts to spot a hidden enemy     |
 | 1       | **Shoot / Fight** | One operant attacks a visible enemy   |
 
-> **One operant per action.** Each action must be assigned to an operant. The same operant may receive multiple actions in a single turn — but each action costs 1 CP.
+> **Examples:** You could Move one operant, Scout with them, then Shoot with them (all 3 CP on one operant). Or Move one operant and have two others Shoot. You cannot spend two Shoot actions on the same operant, but you can Shoot with two different operants in the same turn.
 
 ---
 
@@ -36,7 +36,6 @@ Each CP may be spent on one action. You may spend all 3 CP on different actions,
 Choose one operant. Move them up to their full **MOV** distance (in inches) in any direction.
 
 **Rules:**
-- Movement may be split: move 3", perform another action, then use a second Move to continue.
 - Operants **may not move through** other operants or impassable terrain.
 - Moving within **1" of an enemy** operant ends your movement (you are engaged in melee).
 - An operant that ends its Move in **cover** (a wall, crate, barricade, etc.) gains **+2 AC** against ranged attacks until they next move.
@@ -114,30 +113,15 @@ Choose one operant. They attack a **visible (Spotted) enemy** with one of their 
 
 ---
 
-## Conditions Reference
-
-Conditions are applied by weapons or Special Abilities. They last until the stated duration.
-
-| Condition     | Effect                                                              | Ends When                        |
-|---------------|---------------------------------------------------------------------|----------------------------------|
-| **Spotted**   | Enemy can be targeted by Shoot and Fight actions                    | Target moves into full cover     |
-| **Staggered** | –2 AC                                                               | End of target's next activation  |
-| **Pinned**    | –2 to hit on all attacks                                            | End of target's next activation  |
-| **Stunned**   | Skip next activation entirely                                       | Start of target's turn after next |
-| **Disrupted** | –2 to next attack roll                                              | After next attack roll           |
-| **Burning**   | Take 1d4 fire damage at start of next activation                   | After taking the damage          |
-| **Poisoned**  | Take 1d4 damage at start of next activation                        | After taking the damage          |
-| **Marked**    | Attacker who applied the mark gains +2 to hit and may trigger bonus effects | Until target is Downed  |
-
----
-
 ## Quick Reference
 
 ```
 YOUR TURN
 ─────────────────────────────────────────
   Receive 3 Command Points (CP)
-  Spend each CP on one action:
+  Each CP assigns one action to one operant.
+  Same action type cannot be used twice on the same operant.
+  An operant may receive up to: 1 Move + 1 Scout + 1 Shoot.
 
   MOVE (1 CP)
   └─ Move one operant up to their MOV
