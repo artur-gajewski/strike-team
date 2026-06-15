@@ -526,6 +526,8 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         </table>
       </div>
 
+      </div>
+
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
@@ -535,7 +537,133 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 3 — OVERVIEW + TURN STRUCTURE
+     PAGE 3 — SETTING UP THE PLAY AREA
+     ════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <div class="page-header-title">Setting Up the Play Area</div>
+      <div class="page-header-game">Strike Team · Basic Rules</div>
+    </div>
+    <div class="page-body" style="padding-top: 16mm;">
+
+      <!-- PLAY AREA -->
+      <div>
+        <div class="sub-heading">🗺️ Play Mat or Playing Surface</div>
+        <p>Strike Team is played on a flat surface representing the battlefield. The recommended playing area is <strong>30" × 24"</strong> — large enough to give operants room to maneuver while keeping engagements tense. Any of the following work well:</p>
+        <ul class="rules-list">
+          <li><strong>Neoprene game mat</strong> — printed with urban, industrial, or wilderness textures (ideal)</li>
+          <li><strong>Plain green or grey felt</strong> — cheap and easy to cut to size</li>
+          <li><strong>Poster board or large cutting mat</strong> — practical for casual play</li>
+          <li><strong>Tabletop with marked grid</strong> — use a 1" grid mat for easier distance measuring</li>
+        </ul>
+      </div>
+
+      <!-- TERRAIN -->
+      <div>
+        <div class="sub-heading">🧱 Terrain Obstacles</div>
+        <p>Terrain pieces create the obstacles, cover, and chokepoints that make the game tactical. You need a mix of <strong>blocking terrain</strong> (fully hides operants) and <strong>cover terrain</strong> (partial protection). Recommended pieces:</p>
+        <table class="data-table">
+          <thead><tr><th>Terrain Piece</th><th>Type</th><th>Suggested Qty</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Ruined walls / barricades</strong></td><td>Cover</td><td>6–8</td></tr>
+            <tr><td><strong>Shipping containers / crates</strong></td><td>Cover &amp; Blocking</td><td>4–6</td></tr>
+            <tr><td><strong>Small buildings / ruins</strong></td><td>Blocking</td><td>2–4</td></tr>
+            <tr><td><strong>Rock formations / boulders</strong></td><td>Cover</td><td>4–6</td></tr>
+            <tr><td><strong>Trees / dense foliage clusters</strong></td><td>Obscuring</td><td>3–5</td></tr>
+            <tr><td><strong>Fuel drums / pillars</strong></td><td>Cover</td><td>4–6</td></tr>
+          </tbody>
+        </table>
+        <div class="rule-block" style="margin-top:3mm;">
+          Miniature terrain, 3D-printed scenery, LEGO bricks, or cardboard cut-outs all work. What matters is that both players agree on which pieces <strong>block line of sight</strong> and which only grant <strong>cover (+2 AC)</strong> before the game starts.
+        </div>
+      </div>
+
+      <div>
+        <div class="section-heading">
+          <h2>Setting Up the Play Area</h2>
+          <div class="sub">Board size · Terrain placement · Deployment zones</div>
+        </div>
+        <p>A well-constructed play area rewards tactical movement, punishes reckless charges, and ensures neither team has a natural advantage. Follow these steps before the first turn.</p>
+      </div>
+
+      <!-- STEP 1 -->
+      <div>
+        <div class="sub-heading">Step 1 — Lay Out the Board</div>
+        <p>Set up your playing surface (<strong>30" × 24"</strong> recommended). Orient it so the long edges face each player. Define the two short edges as <strong>deployment edges</strong> — each player deploys from their own edge.</p>
+        <div class="rule-block">
+          <strong>Deployment zone:</strong> Each player places all five of their operants within <strong>4" of their deployment edge</strong> before the game begins. Operants start visible — Spotted tokens are not required at deployment.
+        </div>
+      </div>
+
+    </div>
+    <div class="page-footer">
+      <div class="page-footer-text">Strike Team · Basic Rules</div>
+      <div class="page-footer-text">3</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     PAGE 4 — SETTING UP (CONTINUED)
+     ════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <div class="page-header-title">Setting Up the Play Area (continued)</div>
+      <div class="page-header-game">Strike Team · Basic Rules</div>
+    </div>
+    <div class="page-body">
+
+      <!-- STEP 2 -->
+      <div>
+        <div class="sub-heading">Step 2 — Place Terrain</div>
+        <p>Players alternate placing terrain pieces, one at a time, starting with the player who lost the last dice roll (or a coin flip for the first game). Follow these guidelines for a balanced battlefield:</p>
+        <ul class="rules-list">
+          <li>Aim for <strong>8–14 terrain pieces</strong> total on a 30"×24" board.</li>
+          <li>Place <strong>at least 2 large blocking pieces</strong> (buildings, container stacks) in the central zone to create mid-field cover and break long sightlines.</li>
+          <li>Scatter <strong>cover pieces</strong> (crates, barricades, boulders) across the board — roughly one piece every 6–8".</li>
+          <li>Place <strong>trees or foliage</strong> in clusters of 2–3 to create obscuring zones where operants can hide.</li>
+          <li>No terrain piece may be placed within <strong>3" of a deployment edge</strong>.</li>
+          <li>No terrain piece may be placed within <strong>1" of another terrain piece</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- STEP 3 -->
+      <div>
+        <div class="sub-heading">Step 3 — Agree on Terrain Rules</div>
+        <p>Before the game, both players must agree on the following for each terrain type:</p>
+        <table class="data-table">
+          <thead><tr><th>Terrain Type</th><th>Blocks Line of Sight?</th><th>Grants Cover (+2 AC)?</th><th>Passable?</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Solid walls / buildings</strong></td><td>✅ Yes</td><td>✅ Yes (edge)</td><td>❌ No</td></tr>
+            <tr><td><strong>Crates / barricades</strong></td><td>✅ Yes (if taller than base)</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td><strong>Boulders / rocks</strong></td><td>✅ Yes</td><td>✅ Yes</td><td>❌ No</td></tr>
+            <tr><td><strong>Trees / foliage</strong></td><td>✅ Yes (obscuring)</td><td>✅ Yes</td><td>✅ Yes (costs +1" per 2" moved through)</td></tr>
+            <tr><td><strong>Fuel drums / pillars</strong></td><td>❌ No</td><td>✅ Yes</td><td>❌ No</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- STEP 4 -->
+      <div>
+        <div class="sub-heading">Step 4 — Deploy Operants</div>
+        <p>Players roll off (d20, highest wins) to decide who deploys first. The <strong>winner deploys last</strong> — a tactical advantage. Players alternate placing one operant at a time within their deployment zone until all ten operants are on the board.</p>
+        <div class="rule-block">
+          <strong>Tip:</strong> Place scouts (Phantom, Whisper) near flanks for early Overwatch positions. Deploy heavy operants (Ironkeg, Vault) centrally where they can control chokepoints. Keep your medic (Stitch) behind other operants at deployment.
+        </div>
+      </div>
+
+    </div>
+    <div class="page-footer">
+      <div class="page-footer-text">Strike Team · Basic Rules</div>
+      <div class="page-footer-text">4</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     PAGE 5 — OVERVIEW + TURN STRUCTURE
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
@@ -608,13 +736,13 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">3</div>
+      <div class="page-footer-text">5</div>
     </div>
   </div>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 4 — ACTIONS IN DETAIL
+     PAGE 6 — ACTIONS IN DETAIL
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
@@ -676,13 +804,13 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">4</div>
+      <div class="page-footer-text">6</div>
     </div>
   </div>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 5 — SHOOT / FIGHT + DAMAGE
+     PAGE 7 — SHOOT / FIGHT + DAMAGE
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
@@ -745,13 +873,13 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">5</div>
+      <div class="page-footer-text">7</div>
     </div>
   </div>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 6 — SPOTTED CONDITION + QUICK REFERENCE + EXAMPLE
+     PAGE 8 — SPOTTED CONDITION + QUICK REFERENCE + EXAMPLE
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
@@ -833,7 +961,12 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">6</div>
+      <div class="page-footer-text">8</div>
+    </div>
+  </div>
+</div>
+
+</body>
 </html>
 """
 
