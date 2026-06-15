@@ -35,7 +35,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 
   /* ── COVER PAGE ── */
   .cover {{
-      background: linear-gradient(160deg, {ACCENT} 0%, #7B1010 100%);
+      background: #ffffff;
       flex: 1;
       display: flex;
       flex-direction: column;
@@ -50,7 +50,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
       font-size: 13px;
       letter-spacing: 5px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: rgba(192,57,43,0.6);
   }}
   .cover-title {{
       font-family: 'Barlow Condensed', Arial, sans-serif;
@@ -58,7 +58,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
       font-size: 64px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: #ffffff;
+      color: {ACCENT};
       text-align: center;
       line-height: 1;
   }}
@@ -68,18 +68,18 @@ HTML_CONTENT = f"""<!DOCTYPE html>
       font-size: 20px;
       letter-spacing: 6px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.75);
+      color: rgba(123,16,16,0.75);
       text-align: center;
   }}
   .cover-rule {{
       width: 60mm;
       height: 2px;
-      background: rgba(255,255,255,0.3);
+      background: rgba(192,57,43,0.3);
       margin: 4mm 0;
   }}
   .cover-tagline {{
       font-size: 12px;
-      color: rgba(255,255,255,0.5);
+      color: rgba(192,57,43,0.5);
       letter-spacing: 2px;
       text-transform: uppercase;
       text-align: center;
@@ -358,6 +358,38 @@ HTML_CONTENT = f"""<!DOCTYPE html>
   }}
   .example-box .ex-step strong {{ color: #111; }}
 
+  /* ── WHAT YOU NEED — DICE GRID ── */
+  .need-grid {{
+      display: flex;
+      gap: 3mm;
+      flex-wrap: wrap;
+      margin-top: 3mm;
+  }}
+  .need-chip {{
+      flex: 1;
+      min-width: 28mm;
+      border: 1.5px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+      text-align: center;
+  }}
+  .need-chip-die {{
+      background: {ACCENT};
+      color: #ffffff;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 1px;
+      padding: 6px 0;
+  }}
+  .need-chip-desc {{
+      padding: 5px 6px;
+      font-size: 10px;
+      color: #444;
+      line-height: 1.4;
+      background: #fff;
+  }}
+
   /* ── CONDITIONS TABLE ── */
   .conditions-grid {{
       display: flex;
@@ -411,7 +443,99 @@ HTML_CONTENT = f"""<!DOCTYPE html>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 2 — OVERVIEW + TURN STRUCTURE
+     PAGE 2 — WHAT DO YOU NEED
+     ════════════════════════════════════════════════════ -->
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <div class="page-header-title">What Do You Need to Play</div>
+      <div class="page-header-game">Strike Team · Basic Rules</div>
+    </div>
+    <div class="page-body">
+
+      <div class="section-heading">
+        <h2>What Do You Need to Play</h2>
+      </div>
+
+      <!-- DICE -->
+      <div>
+        <div class="sub-heading">🎲 Dice</div>
+        <p>You will need a set of polyhedral dice. Both players share or bring their own. The following dice are used in Strike Team:</p>
+        <div class="need-grid">
+          <div class="need-chip">
+            <div class="need-chip-die">d4</div>
+            <div class="need-chip-desc">Poison, Burning damage &amp; light weapon damage</div>
+          </div>
+          <div class="need-chip">
+            <div class="need-chip-die">d6</div>
+            <div class="need-chip-desc">Sidearms, blades &amp; general weapon damage</div>
+          </div>
+          <div class="need-chip">
+            <div class="need-chip-die">d8</div>
+            <div class="need-chip-desc">Rifles, axes &amp; heavy weapon damage</div>
+          </div>
+          <div class="need-chip">
+            <div class="need-chip-die">d10</div>
+            <div class="need-chip-desc">Marksman rifles, cannons &amp; sniper weapons</div>
+          </div>
+          <div class="need-chip">
+            <div class="need-chip-die">d20</div>
+            <div class="need-chip-desc">All attack rolls and Perception (Scout) checks</div>
+          </div>
+        </div>
+        <div class="rule-block" style="margin-top:4mm;">
+          <strong>Tip:</strong> Having 2–3 of each die speeds up play, especially for blast weapons that roll multiple dice at once.
+        </div>
+      </div>
+
+      <!-- RULER -->
+      <div>
+        <div class="sub-heading">📏 Ruler or Measuring Tape</div>
+        <p>All distances in Strike Team are measured in <strong>inches</strong>. You need a ruler or flexible measuring tape marked in inches to measure movement, weapon ranges, and ability radii.</p>
+      </div>
+
+      <!-- MINIATURES -->
+      <div>
+        <div class="sub-heading">🧍 10 Miniatures (Five Red, Five Blue)</div>
+        <p>Each team requires five miniatures on <strong>1-inch round bases</strong>. Use two sets in contrasting team colours:</p>
+        <ul class="rules-list">
+          <li><strong>5 Red miniatures</strong> — Crimson Talons Vanguard (Operants #1–5)</li>
+          <li><strong>5 Blue miniatures</strong> — Ashborn Syndicate Strike Cell (Operants #1–5)</li>
+        </ul>
+        <p style="margin-top:2mm;">Each miniature must be individually identifiable by its <strong>operant number (#1–#5)</strong>, matching the number printed on that operant's character sheet. Use numbered bases, stickers, paint markings, or small numbered tokens beneath each model.</p>
+      </div>
+
+      <!-- TOKENS -->
+      <div>
+        <div class="sub-heading">🪙 Tokens &amp; Markers</div>
+        <p>You will need the following tokens during play. Small coloured coins, poker chips, or printed chits all work well:</p>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Qty</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Spotted</strong></td><td>10</td><td>Placed next to an operant detected by a Scout action — marks them as targetable by Shoot actions. Removed when that operant moves at least 1".</td></tr>
+            <tr><td><strong>Overwatch</strong></td><td>2</td><td>Placed when Phantom (Crimson Talons) uses their Overwatch Eye ability — triggers a free attack</td></tr>
+            <tr><td><strong>Demolition Charge</strong></td><td>1</td><td>Placed on terrain by Ironkeg — explodes when triggered or detonated remotely</td></tr>
+            <tr><td><strong>Sentry Drone</strong></td><td>1</td><td>Placed on the battlefield by Arc (Ashborn Syndicate) — attacks independently each round</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="page-footer">
+      <div class="page-footer-text">Strike Team · Basic Rules</div>
+      <div class="page-footer-text">2</div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     PAGE 3 — OVERVIEW + TURN STRUCTURE
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
@@ -484,13 +608,13 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">2</div>
+      <div class="page-footer-text">3</div>
     </div>
   </div>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 3 — ACTIONS IN DETAIL
+     PAGE 4 — ACTIONS IN DETAIL
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
@@ -543,7 +667,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
         </table>
         <br>
         <ul class="rules-list">
-          <li><strong>Success:</strong> Target is Spotted — place a Spotted token. They can now be targeted for the rest of the game (or until they move into full cover and are declared hidden again).</li>
+          <li><strong>Success:</strong> Place a <strong>Spotted token</strong> next to the target's miniature. That operant can now be targeted by Shoot and Fight actions. The Spotted condition is removed as soon as the target moves at least <strong>1"</strong>.</li>
           <li><strong>Failure:</strong> The CP is wasted. You may try again next turn.</li>
           <li><strong>Line of Sight required:</strong> Your operant must have a clear line to at least part of the structure the target hides behind. You cannot Scout through solid walls.</li>
         </ul>
@@ -552,13 +676,13 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">3</div>
+      <div class="page-footer-text">4</div>
     </div>
   </div>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 4 — SHOOT / FIGHT + DAMAGE
+     PAGE 5 — SHOOT / FIGHT + DAMAGE
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
@@ -621,61 +745,44 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">4</div>
+      <div class="page-footer-text">5</div>
     </div>
   </div>
 </div>
 
 <!-- ════════════════════════════════════════════════════
-     PAGE 5 — CONDITIONS + QUICK REFERENCE + EXAMPLE
+     PAGE 6 — SPOTTED CONDITION + QUICK REFERENCE + EXAMPLE
      ════════════════════════════════════════════════════ -->
 <div class="page">
   <div class="content-page">
     <div class="page-header">
-      <div class="page-header-title">Conditions, Reference &amp; Example</div>
+      <div class="page-header-title">Spotted Condition, Reference &amp; Example</div>
       <div class="page-header-game">Strike Team · Basic Rules</div>
     </div>
     <div class="page-body">
 
       <div>
         <div class="section-heading">
-          <h2>Conditions</h2>
-          <div class="sub">Applied by weapons and special abilities</div>
+          <h2>The Spotted Condition</h2>
+          <div class="sub">The only condition in Strike Team</div>
         </div>
-        <div class="conditions-grid">
-          <div class="condition-chip">
-            <div class="condition-chip-header">Spotted</div>
-            <div class="condition-chip-body">Enemy can be targeted by Shoot and Fight actions.<div class="ends">Ends: target moves into full cover</div></div>
-          </div>
-          <div class="condition-chip">
-            <div class="condition-chip-header">Staggered</div>
-            <div class="condition-chip-body">–2 AC.<div class="ends">Ends: end of target's next activation</div></div>
-          </div>
-          <div class="condition-chip">
-            <div class="condition-chip-header">Pinned</div>
-            <div class="condition-chip-body">–2 to all attack rolls.<div class="ends">Ends: end of target's next activation</div></div>
-          </div>
-          <div class="condition-chip">
-            <div class="condition-chip-header">Stunned</div>
-            <div class="condition-chip-body">Skip next activation entirely.<div class="ends">Ends: start of target's turn after next</div></div>
-          </div>
-          <div class="condition-chip">
-            <div class="condition-chip-header">Disrupted</div>
-            <div class="condition-chip-body">–2 to next attack roll only.<div class="ends">Ends: after next attack roll</div></div>
-          </div>
-          <div class="condition-chip">
-            <div class="condition-chip-header">Burning</div>
-            <div class="condition-chip-body">Take 1d4 fire damage at start of next activation.<div class="ends">Ends: after taking the damage</div></div>
-          </div>
-          <div class="condition-chip">
-            <div class="condition-chip-header">Poisoned</div>
-            <div class="condition-chip-body">Take 1d4 damage at start of next activation.<div class="ends">Ends: after taking the damage</div></div>
-          </div>
-          <div class="condition-chip">
-            <div class="condition-chip-header">Marked</div>
-            <div class="condition-chip-body">Attacker gains +2 to hit and may trigger bonus effects against this target.<div class="ends">Ends: target is Downed</div></div>
-          </div>
+        <p>An enemy operant that is <strong>hiding behind an obstacle</strong> — out of direct line of sight — cannot be targeted by Shoot or Fight actions until they are <strong>Spotted</strong>.</p>
+        <p>When a Scout action succeeds, the scouting operant has detected the hidden enemy. Place a <strong>Spotted token</strong> next to that enemy's miniature to identify their condition. That operant can now be targeted for shooting — as long as the attacker has line of sight to any part of the target's position.</p>
+        <div class="rule-block">
+          <strong>Removing Spotted:</strong> The Spotted condition is removed immediately when the target operant moves at least <strong>1"</strong>. They are once again hidden and cannot be targeted until Spotted again by a new Scout action.
         </div>
+        <br>
+        <table class="data-table">
+          <thead>
+            <tr><th>Situation</th><th>Can be targeted?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>In open — no obstacle between attacker and target</td><td>✅ Yes</td></tr>
+            <tr><td>Behind obstacle, no Spotted token</td><td>❌ No — must Scout first</td></tr>
+            <tr><td>Behind obstacle, has Spotted token</td><td>✅ Yes — until they move 1"</td></tr>
+            <tr><td>Had Spotted token, moved 1" or more</td><td>❌ No — token removed, must Scout again</td></tr>
+          </tbody>
+        </table>
       </div>
 
       <div>
@@ -726,12 +833,7 @@ HTML_CONTENT = f"""<!DOCTYPE html>
     </div>
     <div class="page-footer">
       <div class="page-footer-text">Strike Team · Basic Rules</div>
-      <div class="page-footer-text">5</div>
-    </div>
-  </div>
-</div>
-
-</body>
+      <div class="page-footer-text">6</div>
 </html>
 """
 
