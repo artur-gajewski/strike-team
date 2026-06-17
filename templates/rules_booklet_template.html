@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@400;500;600&display=swap');
+
+  @page { margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+      font-size: 13px;
+      line-height: 1.6;
+  }
+
+  /* ── PAGE ── */
+  .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 0;
+      background: #ffffff;
+      page-break-after: always;
+      display: flex;
+      flex-direction: column;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+      background: #ffffff;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20mm;
+      gap: 6mm;
+  }
+  .cover-eyebrow {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: rgba(192,57,43,0.6);
+  }
+  .cover-title {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 64px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #C0392B;
+      text-align: center;
+      line-height: 1;
+  }
+  .cover-subtitle {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: rgba(123,16,16,0.75);
+      text-align: center;
+  }
+  .cover-rule {
+      width: 60mm;
+      height: 2px;
+      background: rgba(192,57,43,0.3);
+      margin: 4mm 0;
+  }
+  .cover-tagline {
+      font-size: 12px;
+      color: rgba(192,57,43,0.5);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+  }
+
+  /* ── CONTENT PAGES ── */
+  .content-page {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+  }
+  .page-header {
+      background: linear-gradient(135deg, #C0392B 0%, #A93226 100%);
+      padding: 6px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .page-header-title {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+  }
+  .page-header-game {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+  }
+
+  .page-body {
+      flex: 1;
+      padding: 10mm 14mm;
+      display: flex;
+      flex-direction: column;
+      gap: 7mm;
+  }
+
+  .page-footer {
+      border-top: 1px solid #e0e0e0;
+      padding: 4px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .page-footer-text {
+      font-size: 9px;
+      color: #aaa;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+  }
+
+  /* ── SECTION HEADING ── */
+  .section-heading {
+      border-left: 5px solid #C0392B;
+      padding-left: 10px;
+      margin-bottom: 2mm;
+  }
+  .section-heading h2 {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #111;
+      line-height: 1;
+  }
+  .section-heading .sub {
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 1px;
+  }
+
+  /* ── SUBSECTION HEADING ── */
+  .sub-heading {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C0392B;
+      margin-bottom: 2px;
+      margin-top: 4px;
+  }
+
+  /* ── BODY TEXT ── */
+  p { margin-bottom: 3mm; color: #222; }
+  strong { color: #111; font-weight: 600; }
+
+  /* ── RULE BLOCK (highlighted callout) ── */
+  .rule-block {
+      background: #f8f8f8;
+      border-left: 4px solid #C0392B;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+      font-size: 12px;
+      color: #333;
+  }
+  .rule-block strong { color: #C0392B; }
+
+  /* ── NUMBERED LIST ── */
+  ol.steps {
+      padding-left: 20px;
+      margin: 0;
+  }
+  ol.steps li {
+      margin-bottom: 4px;
+      color: #222;
+  }
+
+  /* ── BULLET LIST ── */
+  ul.rules-list {
+      padding-left: 20px;
+      margin: 0;
+  }
+  ul.rules-list li {
+      margin-bottom: 4px;
+      color: #222;
+  }
+
+  /* ── CP ACTION CARDS ── */
+  .action-cards {
+      display: flex;
+      gap: 5mm;
+  }
+  .action-card {
+      flex: 1;
+      border: 1.5px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+  }
+  .action-card-header {
+      background: linear-gradient(135deg, #C0392B 0%, #A93226 100%);
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+  }
+  .action-card-icon {
+      font-size: 18px;
+      line-height: 1;
+  }
+  .action-card-title {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+  }
+  .action-card-cp {
+      margin-left: auto;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 1px;
+  }
+  .action-card-body {
+      padding: 8px 10px;
+      font-size: 11px;
+      color: #333;
+      line-height: 1.5;
+      background: #fff;
+  }
+
+  /* ── DATA TABLE ── */
+  .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+  }
+  .data-table thead tr {
+      background: #C0392B;
+  }
+  .data-table th {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #ffffff;
+      padding: 5px 10px;
+      text-align: left;
+      text-transform: uppercase;
+  }
+  .data-table td {
+      padding: 6px 10px;
+      color: #222;
+      border-bottom: 1px solid #eee;
+      vertical-align: middle;
+  }
+  .data-table tbody tr:nth-child(even) { background: #f9f9f9; }
+  .data-table tbody tr:last-child td { border-bottom: none; }
+  .data-table td strong { color: #C0392B; }
+
+  /* ── QUICK REFERENCE BOX ── */
+  .quick-ref {
+      border: 1.5px solid #C0392B;
+      border-radius: 6px;
+      overflow: hidden;
+  }
+  .quick-ref-header {
+      background: #C0392B;
+      padding: 5px 12px;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffffff;
+  }
+  .quick-ref-body {
+      padding: 8px 12px;
+      display: flex;
+      gap: 6mm;
+  }
+  .quick-ref-col {
+      flex: 1;
+  }
+  .qr-label {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #C0392B;
+      margin-bottom: 3px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 2px;
+  }
+  .qr-item {
+      font-size: 11px;
+      color: #333;
+      margin-bottom: 2px;
+      padding-left: 8px;
+      position: relative;
+  }
+  .qr-item::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #C0392B;
+      font-weight: 700;
+  }
+
+  /* ── EXAMPLE BOX ── */
+  .example-box {
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-size: 11px;
+      color: #333;
+      line-height: 1.6;
+  }
+  .example-box .ex-label {
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #C0392B;
+      margin-bottom: 5px;
+  }
+  .example-box .ex-step {
+      margin-bottom: 5px;
+      padding-left: 10px;
+      border-left: 2px solid #ddd;
+  }
+  .example-box .ex-step strong { color: #111; }
+
+  /* ── WHAT YOU NEED — DICE GRID ── */
+  .need-grid {
+      display: flex;
+      gap: 3mm;
+      flex-wrap: wrap;
+      margin-top: 3mm;
+  }
+  .need-chip {
+      flex: 1;
+      min-width: 28mm;
+      border: 1.5px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+      text-align: center;
+  }
+  .need-chip-die {
+      background: #C0392B;
+      color: #ffffff;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 1px;
+      padding: 6px 0;
+  }
+  .need-chip-desc {
+      padding: 5px 6px;
+      font-size: 10px;
+      color: #444;
+      line-height: 1.4;
+      background: #fff;
+  }
+
+  /* ── CONDITIONS TABLE ── */
+  .conditions-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3mm;
+  }
+  .condition-chip {
+      border: 1.5px solid #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      width: calc(50% - 1.5mm);
+  }
+  .condition-chip-header {
+      background: #222;
+      padding: 3px 8px;
+      font-family: 'Barlow Condensed', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+  }
+  .condition-chip-body {
+      padding: 5px 8px;
+      font-size: 11px;
+      color: #333;
+      line-height: 1.4;
+      background: #fff;
+  }
+  .condition-chip-body .ends {
+      font-size: 10px;
+      color: #999;
+      margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+{# ── MACROS ────────────────────────────────────────────── #}
+
+{% macro render_block(block) %}
+{%   if block.type == 'paragraph' %}
+        <p>{{ block.text | md }}</p>
+{%   elif block.type == 'sub_heading' %}
+{%     set sh_style = '' %}
+{%     if block.color is defined and block.style is defined %}
+{%       set sh_style = 'color: ' ~ block.color ~ '; ' ~ block.style %}
+{%     elif block.color is defined %}
+{%       set sh_style = 'color: ' ~ block.color ~ ';' %}
+{%     elif block.style is defined %}
+{%       set sh_style = block.style %}
+{%     endif %}
+        <div class="sub-heading"{% if sh_style %} style="{{ sh_style }}"{% endif %}>{{ block.text }}</div>
+{%   elif block.type == 'rule_block' %}
+        <div class="rule-block"{% if block.style is defined %} style="{{ block.style }}"{% endif %}>{{ block.text | md }}</div>
+{%   elif block.type == 'list_ul' %}
+        <ul class="rules-list">
+{%     for item in block["items"] %}
+          <li>{{ item | md }}</li>
+{%     endfor %}
+        </ul>
+{%   elif block.type == 'list_ol' %}
+        <ol class="steps"{% if block.style is defined %} style="{{ block.style }}"{% endif %}>
+{%     for item in block["items"] %}
+          <li>{{ item | md }}</li>
+{%     endfor %}
+        </ol>
+{%   elif block.type == 'data_table' %}
+        <table class="data-table">
+          <thead>
+            <tr>
+{%     for header in block.headers %}
+              <th>{{ header }}</th>
+{%     endfor %}
+            </tr>
+          </thead>
+          <tbody>
+{%     for row in block.rows %}
+            <tr>
+{%       for cell in row %}
+              <td>{{ cell | md }}</td>
+{%       endfor %}
+            </tr>
+{%     endfor %}
+          </tbody>
+        </table>
+{%   elif block.type == 'need_grid' %}
+        <div class="need-grid">
+{%     for item in block["items"] %}
+          <div class="need-chip">
+            <div class="need-chip-die">{{ item.die }}</div>
+            <div class="need-chip-desc">{{ item.desc }}</div>
+          </div>
+{%     endfor %}
+        </div>
+{%   elif block.type == 'action_cards' %}
+        <div class="action-cards">
+{%     for card in block.cards %}
+          <div class="action-card">
+            <div class="action-card-header">
+              <div class="action-card-icon">{{ card.icon }}</div>
+              <div class="action-card-title">{{ card.title }}</div>
+              <div class="action-card-cp">{{ card.cp }}</div>
+            </div>
+{%       if card.body is defined %}
+            <div class="action-card-body">{{ card.body | md }}</div>
+{%       endif %}
+{%       if card.body_ranged is defined %}
+            <div class="action-card-body">{{ card.body_ranged | md }}</div>
+{%       endif %}
+{%       if card.body_melee is defined %}
+            <div class="action-card-body">{{ card.body_melee | md }}</div>
+{%       endif %}
+          </div>
+{%     endfor %}
+        </div>
+{%   elif block.type == 'quick_ref' %}
+        <div class="quick-ref">
+          <div class="quick-ref-header">{{ block.header }}</div>
+          <div class="quick-ref-body">
+{%     for col in block.columns %}
+            <div class="quick-ref-col">
+              <div class="qr-label">{{ col.label }}</div>
+{%       for item in col["items"] %}
+              <div class="qr-item">{{ item }}</div>
+{%       endfor %}
+{%       if col.additional_label is defined %}
+              <div class="qr-label" style="margin-top:5px;">{{ col.additional_label }}</div>
+{%         for item in col["additional_items"] %}
+              <div class="qr-item">{{ item }}</div>
+{%         endfor %}
+{%       endif %}
+            </div>
+{%     endfor %}
+          </div>
+        </div>
+{%   elif block.type == 'example_box' %}
+        <div class="example-box">
+          <div class="ex-label">{{ block.label }}</div>
+{%     for step in block.steps %}
+{%       if step.dim is defined and step.dim %}
+          <div class="ex-step" style="border-left-color: #aaa; color: #777;">
+{%       else %}
+          <div class="ex-step">
+{%       endif %}
+{%       if step.title %}
+            <strong>{{ step.title }}:</strong>
+{%       endif %}
+             {{ step.text | md }}
+          </div>
+{%     endfor %}
+        </div>
+{%   endif %}
+{% endmacro %}
+
+{% macro render_section(section) %}
+      <div>
+{%   if section.heading is defined %}
+        <div class="section-heading">
+          <h2>{{ section.heading }}</h2>
+{%     if section.sub is defined %}
+          <div class="sub">{{ section.sub }}</div>
+{%     endif %}
+        </div>
+{%   endif %}
+{%   for block in section.blocks %}
+        {{ render_block(block) }}
+{%   endfor %}
+      </div>
+{% endmacro %}
+
+{# ── PAGES ─────────────────────────────────────────────── #}
+
+{% for page in pages %}
+
+{%   if page.type == 'cover' %}
+<div class="page">
+  <div class="cover">
+    <div class="cover-eyebrow">{{ page.eyebrow }}</div>
+    <div class="cover-rule"></div>
+    <div class="cover-title">{{ page.title | newline_br }}</div>
+    <div class="cover-subtitle">{{ page.subtitle }}</div>
+    <div class="cover-rule"></div>
+    <div class="cover-tagline">{{ page.tagline }}</div>
+  </div>
+</div>
+
+{%   elif page.type == 'content' %}
+<div class="page">
+  <div class="content-page">
+    <div class="page-header">
+      <div class="page-header-title">{{ page.header }}</div>
+      <div class="page-header-game">Strike Team · Basic Rules</div>
+    </div>
+    <div class="page-body"{% if page.body_style is defined %} style="{{ page.body_style }}"{% endif %}>
+{%     for section in page.sections %}
+      {{ render_section(section) }}
+{%     endfor %}
+    </div>
+    <div class="page-footer">
+      <div class="page-footer-text">Strike Team · Basic Rules</div>
+      <div class="page-footer-text">{{ page.page_number }}</div>
+    </div>
+  </div>
+</div>
+
+{%   endif %}
+{% endfor %}
+
+</body>
+</html>

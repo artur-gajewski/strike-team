@@ -1,0 +1,623 @@
+{
+  "meta": {
+    "title": "Strike Team",
+    "subtitle": "Basic Rules",
+    "author": "Artur Gajewski",
+    "genre": "Tabletop Skirmish Game",
+    "fonts": ["Barlow Condensed", "Barlow"],
+    "theme_color": "#C0392B"
+  },
+  "pages": [
+    {
+      "type": "cover",
+      "eyebrow": "Tabletop Skirmish Game",
+      "title": "Strike\nTeam",
+      "subtitle": "Basic Rules",
+      "tagline": "Designed by Artur Gajewski"
+    },
+    {
+      "type": "content",
+      "page_number": 2,
+      "header": "Introduction",
+      "sections": [
+        {
+          "heading": "What Is Strike Team?",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "**Strike Team** is a fast-paced tactical skirmish game for two players. Each player commands a squad of five elite operants — soldiers, scouts, specialists — in a close-quarters battle fought across ruined urban terrain, industrial complexes, and hostile wilderness. Games last 30–60 minutes and require no board: only a play surface, terrain, miniatures, and dice."
+            },
+            {
+              "type": "paragraph",
+              "text": "Unlike large-scale wargames, Strike Team focuses on the individual. Every operant has a name, a role, and a unique special ability. Every decision matters. Losing a single operative can swing the battle. There are no respawns, no reinforcements, and no extraction plan — only the mission."
+            },
+            {
+              "type": "paragraph",
+              "text": "The game blends the tactical depth of a miniatures wargame with the character-driven mechanics of a d20 styled tabletop roleplaying game. Operant stats are presented as character sheets: Movement, Hit Points, Armor Class, Perception. Combat is resolved with a d20 roll, keeping the system intuitive for players from both hobby traditions."
+            }
+          ]
+        },
+        {
+          "heading": "The World",
+          "sub": "Near-future. No law. Only contract.",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "It is the mid-22nd century. Nation-states have fractured. The gap between the last war and the next one is measured in weeks, not years. Private military corporations now fill the void left by collapsed governments — enforcing contracts, seizing resources, and eliminating threats with surgical precision."
+            },
+            {
+              "type": "paragraph",
+              "text": "Most conflicts never make the news. They are settled quietly, in the dark, by small teams of expendable professionals. These operants are the instrument of choice: five soldiers, deployed behind enemy lines with no support, no witnesses, and a clear objective."
+            }
+          ]
+        },
+        {
+          "heading": "The Factions",
+          "blocks": [
+            {
+              "type": "sub_heading",
+              "text": "⬤ Crimson Talons Vanguard",
+              "color": "#C0392B"
+            },
+            {
+              "type": "paragraph",
+              "text": "A veteran rapid-response unit built from the ruins of a dissolved special operations programme. The Talons operate under a strict chain of command, led by their battle-hardened Sergeant. They are disciplined, adaptable, and fiercely loyal to one another. Where other units rely on firepower, the Talons rely on coordination — their greatest weapon is the team itself. They fight not for money, but for the belief that someone has to hold the line."
+            },
+            {
+              "type": "sub_heading",
+              "text": "⬤ Ashborn Syndicate Strike Cell",
+              "color": "#1A4A8A",
+              "style": "margin-top: 5mm;"
+            },
+            {
+              "type": "paragraph",
+              "text": "The Syndicate is a corporate mercenary outfit operating on the edge of legality — and frequently beyond it. Their operants are augmented with black-market cybernetics: optical implants, combat reflexes, reinforced skeletal frames. They take contracts others refuse and ask no questions about the target. The Syndicate doesn't lose operants — it replaces them. Loyalty is a line item on the budget. What holds this cell together isn't brotherhood. It's the payout."
+            },
+            {
+              "type": "rule_block",
+              "text": "**In Strike Team,** these two factions are in direct opposition — but the rules support any narrative you build. Rename the teams, create new operants, and make the world your own.",
+              "style": "margin-top: 5mm;"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "page_number": 3,
+      "header": "What Do You Need to Play",
+      "sections": [
+        {
+          "heading": "What Do You Need to Play",
+          "blocks": [
+            {
+              "type": "sub_heading",
+              "text": "🎲 Dice"
+            },
+            {
+              "type": "paragraph",
+              "text": "You will need a set of polyhedral dice. Both players share or bring their own. The following dice are used in Strike Team:"
+            },
+            {
+              "type": "need_grid",
+              "items": [
+                { "die": "d4",  "desc": "Poison, Burning damage & light weapon damage" },
+                { "die": "d6",  "desc": "Sidearms, blades & general weapon damage" },
+                { "die": "d8",  "desc": "Rifles, axes & heavy weapon damage" },
+                { "die": "d10", "desc": "Marksman rifles, cannons & sniper weapons" },
+                { "die": "d20", "desc": "All attack rolls and Perception (Scout) checks" }
+              ]
+            },
+            {
+              "type": "rule_block",
+              "text": "**Tip:** Having 2–3 of each die speeds up play, especially for blast weapons that roll multiple dice at once.",
+              "style": "margin-top: 4mm; margin-bottom: 4mm;"
+            },
+            {
+              "type": "sub_heading",
+              "text": "📏 Ruler or Measuring Tape"
+            },
+            {
+              "type": "paragraph",
+              "text": "All distances in Strike Team are measured in **inches**. You need a ruler or flexible measuring tape marked in inches to measure movement, weapon ranges, and ability radii."
+            },
+            {
+              "type": "sub_heading",
+              "text": "🧍 10 Miniatures (Five Red, Five Blue)"
+            },
+            {
+              "type": "paragraph",
+              "text": "Each team requires five miniatures on **1-inch round bases**. Use two sets in contrasting team colours:"
+            },
+            {
+              "type": "list_ul",
+              "items": [
+                "**5 Red miniatures** — Crimson Talons Vanguard (Operants #1–5)",
+                "**5 Blue miniatures** — Ashborn Syndicate Strike Cell (Operants #1–5)"
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "Each miniature must be individually identifiable by its **operant number (#1–#5)**, matching the number printed on that operant's character sheet. Use numbered bases, stickers, paint markings, or small numbered tokens beneath each model."
+            },
+            {
+              "type": "sub_heading",
+              "text": "🪙 Tokens & Markers"
+            },
+            {
+              "type": "paragraph",
+              "text": "You will need the following tokens during play. Small coloured coins, poker chips, or printed chits all work well:"
+            },
+            {
+              "type": "data_table",
+              "headers": ["Token", "Qty", "Purpose"],
+              "rows": [
+                ["**Spotted**",            "10", "Placed next to an operant detected by a Scout action — marks them as targetable by Shoot actions. Removed when that operant moves at least 1\"."],
+                ["**Overwatch**",          "2",  "Placed when Phantom (Crimson Talons) uses their Overwatch Eye ability — triggers a free attack"],
+                ["**Demolition Charge**",  "1",  "Placed on terrain by Ironkeg — explodes when triggered or detonated remotely"],
+                ["**Attack Drone**",       "1",  "Placed on the battlefield by Arc (Ashborn Syndicate) — attacks independently each round"]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "page_number": 4,
+      "header": "Setting Up the Play Area",
+      "body_style": "padding-top: 6mm;",
+      "sections": [
+        {
+          "blocks": [
+            {
+              "type": "sub_heading",
+              "text": "🗺️ Play Mat or Playing Surface"
+            },
+            {
+              "type": "paragraph",
+              "text": "Strike Team is played on a flat surface representing the battlefield. The recommended playing area is **30\" × 24\"** — large enough to give operants room to maneuver while keeping engagements tense. Any of the following work well:"
+            },
+            {
+              "type": "list_ul",
+              "items": [
+                "**Neoprene game mat** — printed with urban, industrial, or wilderness textures (ideal)",
+                "**Plain green or grey felt** — cheap and easy to cut to size",
+                "**Poster board or large cutting mat** — practical for casual play",
+                "**Tabletop with marked grid** — use a 1\" grid mat for easier distance measuring"
+              ]
+            },
+            {
+              "type": "sub_heading",
+              "text": "🧱 Terrain Obstacles"
+            },
+            {
+              "type": "paragraph",
+              "text": "Terrain pieces create the obstacles, cover, and chokepoints that make the game tactical. You need a mix of **blocking terrain** (fully hides operants) and **cover terrain** (partial protection). Recommended pieces:"
+            },
+            {
+              "type": "data_table",
+              "headers": ["Terrain Piece", "Type", "Suggested Qty"],
+              "rows": [
+                ["**Ruined walls / barricades**",          "Cover",             "6–8"],
+                ["**Shipping containers / crates**",       "Cover & Blocking",  "4–6"],
+                ["**Small buildings / ruins**",            "Blocking",          "2–4"],
+                ["**Rock formations / boulders**",         "Cover",             "4–6"],
+                ["**Trees / dense foliage clusters**",     "Obscuring",         "3–5"],
+                ["**Fuel drums / pillars**",               "Cover",             "4–6"]
+              ]
+            },
+            {
+              "type": "rule_block",
+              "text": "Miniature terrain, 3D-printed scenery, LEGO bricks, or cardboard cut-outs all work. What matters is that both players agree on which pieces **block line of sight** and which only grant **cover (+2 AC)** before the game starts.",
+              "style": "margin-top: 3mm;"
+            }
+          ]
+        },
+        {
+          "heading": "Setting Up the Play Area",
+          "sub": "Board size · Terrain placement · Deployment zones",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "A well-constructed play area rewards tactical movement, punishes reckless charges, and ensures neither team has a natural advantage. Follow these steps before the first turn."
+            },
+            {
+              "type": "sub_heading",
+              "text": "Step 1 — Lay Out the Board"
+            },
+            {
+              "type": "paragraph",
+              "text": "Set up your playing surface (**30\" × 24\"** recommended). Orient it so the long edges are on the sides of each player. Define the two short edges as **deployment edges** — each player deploys from their own edge."
+            },
+            {
+              "type": "rule_block",
+              "text": "**Deployment zone:** Each player places all five of their operants within **4\" of their deployment edge** before the game begins, one operant per player in turns. Operants start visible or hidden, Spotted tokens are not required at deployment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "page_number": 5,
+      "header": "Setting Up the Play Area (continued)",
+      "sections": [
+        {
+          "blocks": [
+            {
+              "type": "sub_heading",
+              "text": "Step 2 — Place Terrain"
+            },
+            {
+              "type": "paragraph",
+              "text": "Players alternate placing terrain pieces, one at a time, starting with the player who lost the last dice roll (or a coin flip for the first game). Follow these guidelines for a balanced battlefield:"
+            },
+            {
+              "type": "list_ul",
+              "items": [
+                "Aim for **8–14 terrain pieces** total on a 30\"×24\" board.",
+                "Place **at least 2 large blocking pieces** (buildings, container stacks) in the central zone to create mid-field cover and break long sightlines.",
+                "Scatter **cover pieces** (crates, barricades, boulders) across the board — roughly one piece every 6–8\".",
+                "Place **trees or foliage** in clusters of 2–3 to create obscuring zones where operants can hide.",
+                "No terrain piece may be placed within **3\" of a deployment edge**.",
+                "No terrain piece may be placed within **1\" of another terrain piece**."
+              ]
+            },
+            {
+              "type": "paragraph",
+              "text": "For a quick start, terrain can be pre-set according to specific designs."
+            },
+            {
+              "type": "sub_heading",
+              "text": "Step 3 — Agree on Terrain Rules"
+            },
+            {
+              "type": "paragraph",
+              "text": "Before the game, both players must agree on the following for each terrain type:"
+            },
+            {
+              "type": "data_table",
+              "headers": ["Terrain Type", "Blocks Line of Sight?", "Grants Cover (+2 AC)?", "Passable?"],
+              "rows": [
+                ["**Solid walls / buildings**",  "✅ Yes",                    "✅ Yes (edge)",  "❌ No"],
+                ["**Crates / barricades**",       "✅ Yes (if taller than base)", "✅ Yes",     "❌ No"],
+                ["**Boulders / rocks**",          "✅ Yes",                    "✅ Yes",         "❌ No"],
+                ["**Trees / foliage**",           "✅ Yes (obscuring)",        "✅ Yes",         "✅ Yes (costs +1\" per 2\" moved through)"],
+                ["**Fuel drums / pillars**",      "❌ No",                     "✅ Yes",         "❌ No"]
+              ]
+            },
+            {
+              "type": "sub_heading",
+              "text": "Step 4 — Deploy Operants"
+            },
+            {
+              "type": "paragraph",
+              "text": "Players roll off (d20, highest wins) to decide who deploys first. The **winner deploys last** — a tactical advantage. Players alternate placing one operant at a time within their deployment zone until all ten operants are on the board."
+            },
+            {
+              "type": "rule_block",
+              "text": "**Tip:** Place scouts (Phantom, Whisper) near flanks for early Overwatch positions. Deploy heavy operants (Ironkeg, Vault) centrally where they can control chokepoints. Keep your medic (Stitch) behind other operants at deployment."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "page_number": 6,
+      "header": "Overview & Turn Structure",
+      "sections": [
+        {
+          "heading": "Overview",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Two players each control a **Strike Team** of five operants. Players alternate turns, spending **Command Points** to activate operants — maneuvering for position, gathering intelligence, and eliminating the enemy."
+            },
+            {
+              "type": "paragraph",
+              "text": "The goal is to **down all enemy operants**, or achieve your mission objective before the enemy achieves theirs."
+            }
+          ]
+        },
+        {
+          "heading": "Turn Structure",
+          "sub": "3 Command Points per turn",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Players alternate taking turns. On **your turn**, you receive **3 Command Points (CP)**. Each CP is spent on one action assigned to one operant."
+            },
+            {
+              "type": "rule_block",
+              "text": "**Key rule:** An operant may receive up to 3 CP per turn — one Move, one Scout, and one Shoot/Fight — but **the same action type cannot be assigned twice to the same operant**. Unused CP are lost at end of turn.",
+              "style": "margin-bottom: 4mm;"
+            },
+            {
+              "type": "action_cards",
+              "cards": [
+                {
+                  "icon": "🏃",
+                  "title": "Move",
+                  "cp": "1 CP",
+                  "body": "Move one operant up to their full **MOV** distance in any direction. Operants in **cover** at the end of move gain **+2 Ballistic DC** vs ranged attack until they move again."
+                },
+                {
+                  "icon": "🔍",
+                  "title": "Scout",
+                  "cp": "1 CP",
+                  "body": "Attempt to detect a **hidden enemy**. Roll **d20 + PER** vs Detection DC (set by distance). On success, the target is **Spotted** and can be targeted."
+                },
+                {
+                  "icon": "🔫",
+                  "title": "Shoot / Fight",
+                  "cp": "1 CP",
+                  "body_ranged": "Range Attack a **visible (Spotted)** enemy: Roll **d20 + ATK bonus** vs **Ballistic DC** (set by distance). On a hit, roll weapon **Damage Dice** and apply any Special effects.",
+                  "body_melee": "Melee Attack **within 1\"**: Roll **d20 + ATK bonus** vs target operant's AC. On a hit, roll weapon **Damage Dice** and apply any Special effects."
+                }
+              ]
+            },
+            {
+              "type": "rule_block",
+              "text": "**Examples:** Move one operant, Scout with them, then Shoot with them (all 3 CP on one operant). Or Move one operant and Shoot with two others. You *cannot* Shoot twice with the same operant, but you can Shoot with two different operants.",
+              "style": "margin-top: 4mm;"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "page_number": 7,
+      "header": "Actions in Detail",
+      "sections": [
+        {
+          "heading": "🏃 Move",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Choose one operant. Move them up to their full **MOV** distance (in inches) in any direction."
+            },
+            {
+              "type": "list_ul",
+              "items": [
+                "Operants **may not move through** other operants or impassable terrain.",
+                "Moving within **1\" of an enemy** ends your movement — you are now engaged in melee.",
+                "An operant ending their Move in **cover** (wall, crate, barricade) gains **+2 AC** against ranged attacks until they next move."
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "🔍 Scout",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Choose one operant. They attempt to detect a **hidden enemy**. An enemy starts hidden if they are behind a structure with no line of sight from any of your operants — hidden operants **cannot be targeted** by Shoot or Fight actions."
+            },
+            {
+              "type": "sub_heading",
+              "text": "How to Scout"
+            },
+            {
+              "type": "list_ol",
+              "style": "margin-bottom: 4mm;",
+              "items": [
+                "Declare which enemy operant you are scouting for and their approximate location.",
+                "Roll **d20 + your operant's PER modifier**.",
+                "Compare the result to the **Detection DC** for that distance."
+              ]
+            },
+            {
+              "type": "data_table",
+              "headers": ["Distance to Target", "Detection DC"],
+              "rows": [
+                ["0\" – 8\"",   "**10**"],
+                ["9\" – 16\"",  "**13**"],
+                ["17\" – 24\"", "**16**"],
+                ["25\" – 30\"", "**19**"],
+                ["31\"+",       "**22**"]
+              ]
+            },
+            {
+              "type": "list_ul",
+              "items": [
+                "**Success:** Place a **Spotted token** next to the target's miniature. That operant can now be targeted by Shoot and Fight actions. The Spotted condition is removed as soon as the target moves at least **1\"**.",
+                "**Failure:** The CP is wasted. You may try again next turn.",
+                "**Line of Sight required:** Your operant must have a clear line to at least part of the structure the target hides behind. You cannot Scout through solid walls."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "page_number": 8,
+      "header": "Shoot, Fight & Damage",
+      "sections": [
+        {
+          "heading": "🔫 Shoot / ⚔️ Fight",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "Choose one operant. They attack a **visible (Spotted)** enemy — one that is not hidden, or that has already been Spotted."
+            },
+            {
+              "type": "sub_heading",
+              "text": "Ranged Attack (Shoot)"
+            },
+            {
+              "type": "list_ol",
+              "items": [
+                "Choose a ranged weapon and a target within that weapon's **Range**.",
+                "Roll **d20 + weapon's Attack Bonus**.",
+                "If the result equals or exceeds the **Ballistic DC**, the attack **hits**.",
+                "Roll the weapon's **Damage Dice** and subtract from the target's HP.",
+                "Apply any weapon **Special** effects on a hit."
+              ]
+            },
+            {
+              "type": "rule_block",
+              "text": "**Cover:** If the target is in cover, the **Ballistic DC** increases by **+2** for this attack.\n**Out of Range:** You may not Shoot against a target beyond your weapon's listed range.",
+              "style": "margin-top: 4mm; margin-bottom: 4mm;"
+            },
+            {
+              "type": "data_table",
+              "headers": ["Distance to Target", "Ballistic DC"],
+              "rows": [
+                ["0\" – 8\"",   "**10**"],
+                ["9\" – 16\"",  "**13**"],
+                ["17\" – 24\"", "**16**"],
+                ["25\" – 30\"", "**19**"],
+                ["31\"+",       "**22**"]
+              ]
+            },
+            {
+              "type": "sub_heading",
+              "text": "Melee Attack (Fight)"
+            },
+            {
+              "type": "list_ol",
+              "items": [
+                "Your operant must be **within 1\"** of the target (engaged in melee).",
+                "Choose your melee weapon.",
+                "Roll **d20 + weapon's Attack Bonus**.",
+                "If the result equals or exceeds the target's **AC**, the attack **hits**.",
+                "Roll the weapon's **Damage Dice** and subtract from the target's HP.",
+                "Apply any weapon **Special** effects on a hit."
+              ]
+            },
+            {
+              "type": "rule_block",
+              "text": "**Cover does not apply** to melee attacks — it only protects against ranged fire.",
+              "style": "margin-top: 4mm;"
+            }
+          ]
+        },
+        {
+          "heading": "Damage & Downed Operants",
+          "blocks": [
+            {
+              "type": "list_ul",
+              "items": [
+                "When an operant's **HP reaches 0**, they are **Downed** — remove them from the battlefield immediately.",
+                "Downed operants may not take actions, be activated, or block movement.",
+                "There is **no recovery** from being Downed unless a Special Ability explicitly states otherwise."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "content",
+      "page_number": 9,
+      "header": "Spotted Condition, Reference & Example",
+      "sections": [
+        {
+          "heading": "The Spotted Condition",
+          "sub": "The only condition in Strike Team",
+          "blocks": [
+            {
+              "type": "paragraph",
+              "text": "An enemy operant that is **hiding behind an obstacle** — out of direct line of sight — cannot be targeted by Shoot or Fight actions until they are **Spotted**."
+            },
+            {
+              "type": "paragraph",
+              "text": "When a Scout action succeeds, the scouting operant has detected the hidden enemy. Place a **Spotted token** next to that enemy's miniature to identify their condition. That operant can now be targeted for shooting — as long as the attacker has line of sight to any part of the target's position."
+            },
+            {
+              "type": "rule_block",
+              "text": "**Removing Spotted:** The Spotted condition is removed immediately when the target operant moves at least **1\"**. They are once again hidden and cannot be targeted until Spotted again by a new Scout action.",
+              "style": "margin-bottom: 4mm;"
+            },
+            {
+              "type": "data_table",
+              "headers": ["Situation", "Can be targeted?"],
+              "rows": [
+                ["In open — no obstacle between attacker and target",  "✅ Yes"],
+                ["Behind obstacle, no Spotted token",                  "❌ No — must Scout first"],
+                ["Behind obstacle, has Spotted token",                 "✅ Yes — until they move 1\""],
+                ["Had Spotted token, moved 1\" or more",               "❌ No — token removed, must Scout again"]
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Quick Reference",
+          "sub": "Short guide on turns and actions",
+          "blocks": [
+            {
+              "type": "quick_ref",
+              "header": "⚡ Quick Reference — Your Turn",
+              "columns": [
+                {
+                  "label": "Turn Setup",
+                  "items": [
+                    "Receive 3 Command Points (CP)",
+                    "Each CP = one action on one operant",
+                    "Max: 1 Move + 1 Scout + 1 Shoot per operant",
+                    "Unused CP are lost"
+                  ]
+                },
+                {
+                  "label": "Move (1 CP)",
+                  "items": [
+                    "Move up to MOV distance",
+                    "Cover → +2 Ballistic DC vs ranged"
+                  ],
+                  "additional_label": "Scout (1 CP)",
+                  "additional_items": [
+                    "d20 + PER vs Detection DC",
+                    "Success → target Spotted"
+                  ]
+                },
+                {
+                  "label": "Shoot / Fight (1 CP)",
+                  "items": [
+                    "Target must be Spotted",
+                    "d20 + ATK vs Ballistic DC or target AC",
+                    "Hit → roll damage dice",
+                    "Miss → no effect",
+                    "Cover: +2 Ballistic DC (ranged only)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "heading": "Example Turn",
+          "sub": "Ironclad vs Vault · 3 Command Points",
+          "blocks": [
+            {
+              "type": "example_box",
+              "label": "⬤ Ironclad (Crimson Talons) takes her turn",
+              "steps": [
+                {
+                  "title": "CP 1 — Move",
+                  "text": "Ironclad moves 5\" forward and ducks behind a crate. She is now in cover (+2 AC vs ranged)."
+                },
+                {
+                  "title": "CP 2 — Scout",
+                  "text": "She suspects Vault is lurking 14\" away. Rolls d20 + 4 PER = **17** vs DC **13**. Success — Vault is **Spotted**."
+                },
+                {
+                  "title": "CP 3 — Shoot",
+                  "text": "Ironclad fires her Combat Rifle (+5 ATK, 1d8+2). Rolls d20 + 5 = **19** vs Vault's AC **18**. A hit! Rolls 1d8+2 = **7 damage**. Vault drops from 24 HP to **17 HP**."
+                },
+                {
+                  "title": null,
+                  "text": "Turn passes to the Ashborn Syndicate player.",
+                  "dim": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

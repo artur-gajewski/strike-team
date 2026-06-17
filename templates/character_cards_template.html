@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=Barlow:wght@400;500;600&display=swap');
+
+  @page { margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+      font-family: 'Barlow', 'Arial Narrow', Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+  }
+
+  .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 10mm;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 8mm;
+      page-break-after: always;
+  }
+
+  /* ── CARD ── */
+  .card {
+      background: #ffffff;
+      border: 1.5px solid #ccc;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  /* ── HEADER ── */
+  .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      min-height: 64px;
+      gap: 12px;
+  }
+  .header-number {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 52px;
+      line-height: 1;
+      letter-spacing: -2px;
+      min-width: 42px;
+      text-align: center;
+      color: #ffffff;
+  }
+  .callsign {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 22px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ffffff;
+  }
+  .op-name {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-top: 1px;
+      color: rgba(255,255,255,0.9);
+  }
+  .header-left { flex: 1; }
+  .role {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+  }
+  .faction-tag {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 900;
+      font-size: 8px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 5px 7px;
+      border-radius: 4px;
+      line-height: 1.3;
+  }
+
+  /* ── STATS ── */
+  .stats-bar {
+      display: flex;
+      align-items: stretch;
+      height: 48px;
+      border-bottom: 1.5px solid #e0e0e0;
+  }
+  .stat-box {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 0;
+      background: #ffffff;
+  }
+  .stat-sep {
+      width: 1px;
+      background: #e0e0e0;
+      margin: 6px 0;
+  }
+  .stat-label {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #888;
+  }
+  .stat-value {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #111;
+      line-height: 1;
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 3px 10px;
+      text-transform: uppercase;
+  }
+
+  /* ── WEAPON TABLE ── */
+  .weapon-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+  }
+  .weapon-table thead tr {
+      background: #f5f5f5;
+  }
+  .weapon-table th {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #555;
+      padding: 4px 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      text-transform: uppercase;
+  }
+  .weapon-table td {
+      padding: 5px 8px;
+      color: #222;
+      vertical-align: middle;
+      border-bottom: 1px solid #eee;
+      text-align: left;
+  }
+  .weapon-table tbody tr:last-child td { border-bottom: none; }
+  .weapon-table tbody tr.row-alt { background: #fafafa; }
+  .w-name   { width: 28%; font-weight: 600; color: #111; }
+  .w-center { width: 9%; text-align: left; font-family: 'Barlow Condensed', monospace; font-weight: 700; color: #111; }
+  .w-special { color: #444; font-size: 12px; }
+
+  /* ── ABILITY ── */
+  .ability-box {
+      margin: 6px 10px 8px;
+      padding: 6px 10px;
+      background: #f9f9f9;
+      border-radius: 3px;
+      font-size: 13px;
+      line-height: 1.5;
+  }
+  .ability-name {
+      font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+  }
+  .ability-text {
+      color: #333;
+  }
+</style>
+</head>
+<body>
+{% for faction in factions %}
+{%   for page_ops in faction.operants | batch(2) %}
+{%     set is_single = (page_ops | length == 1) %}
+<div class="page{% if is_single %} single{% endif %}">
+{%     for op in page_ops %}
+<div class="card">
+    <!-- HEADER -->
+    <div class="card-header" style="background: linear-gradient(135deg, {{ faction.header_gradient[0] }} 0%, {{ faction.header_gradient[1] }} 100%);">
+        <div class="header-number">#{{ op.number }}</div>
+        <div class="header-left">
+            <div class="callsign" style="color:#FFFFFF;">{{ op.callsign }}</div>
+            <div class="op-name" style="color:#FFFFFF;">{{ op.op_name }}</div>
+            <div class="role" style="color:#FFFFFF;">{{ op.role }}</div>
+        </div>
+        <div class="faction-tag" style="background:#ffffff; color:{{ faction.color }}; border: 2px solid {{ faction.color }};">
+            {{ faction.tag_lines[0] }}<br>{{ faction.tag_lines[1] }}
+        </div>
+    </div>
+
+    <!-- STAT BLOCK -->
+    <div class="stats-bar">
+{%       for stat_name in ['MOV', 'HP', 'AC', 'PER'] %}
+{%         if not loop.first %}<div class="stat-sep"></div>{% endif %}
+        <div class="stat-box" style="border-bottom: 3px solid {{ faction.color }};">
+            <div class="stat-label">{{ stat_name }}</div>
+            <div class="stat-value">{{ op.stats[stat_name] }}</div>
+        </div>
+{%       endfor %}
+    </div>
+
+    <!-- RANGED WEAPONS -->
+    <div class="section-label" style="background:{{ faction.color }}; color:#ffffff;">⬤ RANGED WEAPONS</div>
+    <table class="weapon-table">
+        <thead>
+            <tr>
+                <th class="w-name">WEAPON</th>
+                <th class="w-center">RNG</th>
+                <th class="w-center">ATK</th>
+                <th class="w-center">DMG</th>
+                <th class="w-special">SPECIAL</th>
+            </tr>
+        </thead>
+        <tbody>
+{%       for weapon in op.ranged_weapons %}
+        <tr class="{{ 'row-alt' if loop.index is even else '' }}">
+            <td class="w-name">{{ weapon.name }}</td>
+            <td class="w-center">{{ weapon.range }}</td>
+            <td class="w-center">{{ weapon.atk }}</td>
+            <td class="w-center">{{ weapon.dmg }}</td>
+            <td class="w-special">{{ weapon.special }}</td>
+        </tr>
+{%       endfor %}
+        </tbody>
+    </table>
+
+    <!-- MELEE WEAPON -->
+    <div class="section-label" style="background:{{ faction.color }}; color:#ffffff;">⬤ MELEE WEAPON</div>
+    <table class="weapon-table">
+        <thead>
+            <tr>
+                <th class="w-name">WEAPON</th>
+                <th class="w-center">ATK</th>
+                <th class="w-center">DMG</th>
+                <th class="w-special" colspan="2">SPECIAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="w-name">{{ op.melee_weapon.name }}</td>
+                <td class="w-center">{{ op.melee_weapon.atk }}</td>
+                <td class="w-center">{{ op.melee_weapon.dmg }}</td>
+                <td class="w-special" colspan="2">{{ op.melee_weapon.special }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SPECIAL ABILITY -->
+    <div class="section-label" style="background:{{ faction.color }}; color:#ffffff;">⬤ SPECIAL ABILITY</div>
+    <div class="ability-box" style="border-left: 4px solid {{ faction.color }};">
+        <span class="ability-name" style="color:{{ faction.color }};">{{ op.special_ability.name }}.</span>
+        <span class="ability-text"> {{ op.special_ability.text }}</span>
+    </div>
+</div>
+{%     endfor %}
+</div>
+{%   endfor %}
+{% endfor %}
+</body>
+</html>

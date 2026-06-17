@@ -1,0 +1,398 @@
+{
+  "meta": {
+    "title": "Strike Team Character Cards",
+    "fonts": ["Barlow Condensed", "Barlow"]
+  },
+  "factions": [
+    {
+      "id": "crimson_talons",
+      "name": "Crimson Talons Vanguard",
+      "tag_lines": ["CRIMSON", "TALONS"],
+      "color": "#C0392B",
+      "header_gradient": ["#C0392B", "#E74C3C"],
+      "operants": [
+        {
+          "number": 1,
+          "callsign": "IRONCLAD",
+          "op_name": "Mara Voss",
+          "role": "Sergeant · Squad Leader",
+          "stats": {
+            "MOV": "6\"",
+            "HP": 20,
+            "AC": 16,
+            "PER": "+4"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Combat Rifle",
+              "range": "24\"",
+              "atk": "+5",
+              "dmg": "1d8+2",
+              "special": "Suppressing Fire: on hit, target cannot take Scout action next activation"
+            },
+            {
+              "name": "Heavy Sidearm",
+              "range": "12\"",
+              "atk": "+5",
+              "dmg": "1d6+2",
+              "special": "Bonus action after moving"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Tactical Blade",
+            "atk": "+6",
+            "dmg": "1d6+3",
+            "special": "Natural 18–20 on attack die: deal +1d6 bonus damage"
+          },
+          "special_ability": {
+            "name": "Rally the Line",
+            "text": "Once per game: all friendlies within 8\" each recover 1 HP."
+          }
+        },
+        {
+          "number": 2,
+          "callsign": "PHANTOM",
+          "op_name": "Dayo Fen",
+          "role": "Scout · Sniper",
+          "stats": {
+            "MOV": "8\"",
+            "HP": 12,
+            "AC": 13,
+            "PER": "+8"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Marksman Rifle",
+              "range": "36\"",
+              "atk": "+7",
+              "dmg": "1d10+3",
+              "special": "Ignore cover AC beyond 12\""
+            },
+            {
+              "special": "Point Blank: within 6\", +1d4 damage"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Serrated Blade",
+            "atk": "+5",
+            "dmg": "1d4+3",
+            "special": "Unaware target: +1d6 damage"
+          },
+          "special_ability": {
+            "name": "Overwatch Eye",
+            "text": "Once per game: place an Overwatch token. By using CP, enemy operant within 24\" LoS triggers a free Marksman Rifle attack from that spot, even if not spotted."
+          }
+        },
+        {
+          "number": 3,
+          "callsign": "IRONKEG",
+          "op_name": "Bram Holst",
+          "role": "Specialist · Demolitions",
+          "stats": {
+            "MOV": "5\"",
+            "HP": 22,
+            "AC": 17,
+            "PER": "+2"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Grenade Launcher",
+              "range": "20\"",
+              "atk": "+4",
+              "dmg": "2d6",
+              "special": "Blast 3\" — AC 14 save or hit"
+            },
+            {
+              "special": "Incendiary: 1d4 fire dmg at start of target's next turn"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Breaching Axe",
+            "atk": "+5",
+            "dmg": "1d8+2",
+            "special": "Ignores cover AC bonus"
+          },
+          "special_ability": {
+            "name": "Frag Pack",
+            "text": "Once per game: plant a charge on terrain. Triggers on entry within 2\" (3d6, Blast 4\") or detonate on Ironkeg's activation."
+          }
+        },
+        {
+          "number": 4,
+          "callsign": "STITCH",
+          "op_name": "Sera Okafor",
+          "role": "Specialist · Combat Medic",
+          "stats": {
+            "MOV": "6\"",
+            "HP": 14,
+            "AC": 14,
+            "PER": "+3"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Assault Carbine",
+              "range": "22\"",
+              "atk": "+4",
+              "dmg": "1d8+1",
+              "special": "Stabilising: on hit, one friendly within 4\" recovers 1 HP"
+            },
+            {
+              "name": "Medshot Injector",
+              "range": "8\"",
+              "atk": "+4",
+              "dmg": "1d6+2",
+              "special": "Heals friendly target instead of damage"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Shock Baton",
+            "atk": "+4",
+            "dmg": "1d6+1",
+            "special": "Target operant: DC 15 save or take damage"
+          },
+          "special_ability": {
+            "name": "Trauma Response",
+            "text": "Once per game: when a friendly within 6\" is downed, Stitch moves up to 4\" and restores them to 2 HP."
+          }
+        },
+        {
+          "number": 5,
+          "callsign": "HURRICANE",
+          "op_name": "Tanek Rall",
+          "role": "Specialist · Close Assault",
+          "stats": {
+            "MOV": "6\"",
+            "HP": 16,
+            "AC": 15,
+            "PER": "+2"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Combat Shotgun",
+              "range": "12\"",
+              "atk": "+6",
+              "dmg": "2d6",
+              "special": "≤6\": +1d4 dmg. >12\": –2 to hit"
+            },
+            {
+              "name": "Submachine Gun",
+              "range": "18\"",
+              "atk": "+5",
+              "dmg": "1d6+2",
+              "special": "Burst: –2 to hit, roll dmg twice (take higher)"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Chainblade",
+            "atk": "+6",
+            "dmg": "1d8+3",
+            "special": "Rend: –1 AC on target (max –3, permanent)"
+          },
+          "special_ability": {
+            "name": "Charge!",
+            "text": "Once per game: move ≥4\" straight toward target before melee: +1d6 damage and push target back 2\"."
+          }
+        }
+      ]
+    },
+    {
+      "id": "ashborn_syndicate",
+      "name": "Ashborn Syndicate Strike Cell",
+      "tag_lines": ["ASHBORN", "SYNDICATE"],
+      "color": "#1A4A8A",
+      "header_gradient": ["#1A4A8A", "#2563b0"],
+      "operants": [
+        {
+          "number": 1,
+          "callsign": "SABLE",
+          "op_name": "Rho Draven",
+          "role": "Sergeant · Mercenary Commander",
+          "stats": {
+            "MOV": "6\"",
+            "HP": 20,
+            "AC": 15,
+            "PER": "+3"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Mag-Rail Carbine",
+              "range": "26\"",
+              "atk": "+5",
+              "dmg": "1d8+2",
+              "special": "Ignores 1 pt heavy armour AC bonus"
+            },
+            {
+              "name": "Scatter Pistol",
+              "range": "10\"",
+              "atk": "+5",
+              "dmg": "1d6+2",
+              "special": "Hits all in 2\" cone from target"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Vibro-Blade",
+            "atk": "+6",
+            "dmg": "1d6+3",
+            "special": "Reroll one damage die per attack (take higher)"
+          },
+          "special_ability": {
+            "name": "Calculated Strike",
+            "text": "Once per game: designate a Priority Target. All friendlies gain +2 to attack that target until it is downed."
+          }
+        },
+        {
+          "number": 2,
+          "callsign": "WHISPER",
+          "op_name": "Lyss Null",
+          "role": "Scout · Infiltrator",
+          "stats": {
+            "MOV": "8\"",
+            "HP": 11,
+            "AC": 12,
+            "PER": "+7"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Silenced Long Rifle",
+              "range": "32\"",
+              "atk": "+6",
+              "dmg": "1d10+2",
+              "special": "Firing does not reveal Whisper's position"
+            },
+            {
+              "name": "Dart Pistol",
+              "range": "12\"",
+              "atk": "+5",
+              "dmg": "1d4+2",
+              "special": "Poison: 1d4 damage at start of target's next turn"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Monofilament Wire",
+            "atk": "+5",
+            "dmg": "1d4+3",
+            "special": "Unaware target: +1d6 damage"
+          },
+          "special_ability": {
+            "name": "Ghost Protocol",
+            "text": "Once per round: spend 2 CP to become Concealed — enemies cannot target Whisper until Whisper moves or attacks."
+          }
+        },
+        {
+          "number": 3,
+          "callsign": "VAULT",
+          "op_name": "Grast Molen",
+          "role": "Specialist · Heavy Support",
+          "stats": {
+            "MOV": "4\"",
+            "HP": 24,
+            "AC": 18,
+            "PER": "+1"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Rotary Cannon",
+              "range": "20\"",
+              "atk": "+4",
+              "dmg": "1d10+1",
+              "special": "Stationary: +1 to hit; on hit, target loses their next Move action"
+            },
+            {
+              "name": "Flamer",
+              "range": "8\"",
+              "atk": "+4",
+              "dmg": "2d4",
+              "special": "Burning: 1d4 fire dmg at start of target's next turn"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Reinforced Fist",
+            "atk": "+5",
+            "dmg": "1d8+2",
+            "special": "Knockback: push target 2\" on hit"
+          },
+          "special_ability": {
+            "name": "Iron Bastion",
+            "text": "While stationary: friendlies within 3\" may use Vault's AC against ranged attacks — Vault absorbs the hit."
+          }
+        },
+        {
+          "number": 4,
+          "callsign": "ARC",
+          "op_name": "Sixx Prenn",
+          "role": "Specialist · Tech Operative",
+          "stats": {
+            "MOV": "6\"",
+            "HP": 13,
+            "AC": 14,
+            "PER": "+4"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Shock Rifle",
+              "range": "22\"",
+              "atk": "+4",
+              "dmg": "1d8",
+              "special": "EMP Burst: on hit, target loses their next Move action"
+            },
+            {
+              "name": "Attack Drone",
+              "range": "24\"",
+              "atk": "+5",
+              "dmg": "1d6+1",
+              "special": "Can be countered by target, drone: HP 4, Ballistic DC 11"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Shock Baton",
+            "atk": "+4",
+            "dmg": "1d6+1",
+            "special": "Target operant: DC 15 save or take damage"
+          },
+          "special_ability": {
+            "name": "System Override",
+            "text": "Once per game: skip movement this activation — one enemy within 18\" LoS loses their Special Ability for the rest of the game."
+          }
+        },
+        {
+          "number": 5,
+          "callsign": "JACKAL",
+          "op_name": "Vael Hurst",
+          "role": "Specialist · Tracker",
+          "stats": {
+            "MOV": "7\"",
+            "HP": 16,
+            "AC": 14,
+            "PER": "+5"
+          },
+          "ranged_weapons": [
+            {
+              "name": "Hunting Rifle",
+              "range": "30\"",
+              "atk": "+6",
+              "dmg": "1d10+1",
+              "special": "Marked: +2 to hit that target for rest of game (does not stack with Calculated Strike)"
+            },
+            {
+              "name": "Revolver",
+              "range": "14\"",
+              "atk": "+5",
+              "dmg": "1d8+1",
+              "special": "Fan the Hammer: fire twice at –2 to hit each"
+            }
+          ],
+          "melee_weapon": {
+            "name": "Hunting Blade",
+            "atk": "+6",
+            "dmg": "1d8+2",
+            "special": "vs Marked target: +1d6 damage"
+          },
+          "special_ability": {
+            "name": "No Hiding",
+            "text": "Once per game: the Marked target's Spotted token is permanent — moving no longer removes it. They remain targetable for the rest of the game."
+          }
+        }
+      ]
+    }
+  ]
+}
